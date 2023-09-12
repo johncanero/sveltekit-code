@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>SvelteKit Home</title>
+	<title>Home / SvelteKit</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
