@@ -1,5 +1,5 @@
 <script>
-    import sveltekit3D from '$lib/images/svelteKit3D.png';
+    import svelteKitTrain from '$lib/images/svelteKitTrain.png';
 </script>
 
 <svelte:head>
@@ -16,7 +16,7 @@
     <div class='flex justify-center'>
         <picture>
             <!-- <source srcset={welcome} type="image/webp" /> -->
-            <img width={600} height={600} src={sveltekit3D} alt="SvelteKit 3D" />
+            <img width={600} height={600} src={svelteKitTrain} alt="SvelteKit 3D" />
         </picture>
     </div>
 </section>
