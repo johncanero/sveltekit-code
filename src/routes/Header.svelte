@@ -1,9 +1,30 @@
 <script>
+    import { page } from "$app/stores";
+    import { onMount } from "svelte";
     import svelteIcon from '$lib/images/svelteIcon.png';
     import githubIcon from '$lib/images/githubIcon.png';
+
+    // Highliting Navbar Links
+  const navs = [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "About",
+      href: "/about",
+    },
+  ];
+
+  
+  $: url = $page.url.href;
+  $: routeId = $page.url.pathname;
 </script>
 
-<navbar class='m-6'>
+  
+
+
+<nav class='p-6 bg-zinc-50'>
     <div class='flex justify-between'>
         <div class='flex'>
             <picture class='mr-12'>
@@ -12,14 +33,18 @@
                 </a>
             </picture>
             
-            <!-- Indicate Highlight of the LINK tag -->
             <ul class='hidden mt-1 md:flex gap-x-10'>
+                {#each navs as { title, href }}
                 <li>
-                    <a href="/" class='font-medium hover:text-orange-600'>Home</a>
-                </li>
-                <li>
-                    <a href="/about" class='font-medium hover:text-orange-600'>About</a>
-                </li>
+                    <a
+                    {href}
+                    class:active={href === "/" ? routeId === "/" : url.includes(href)}
+                    class='font-medium text-md hover:text-orange-500'
+                    {title}>
+                        {title}
+                    </a>
+                 </li>
+                {/each}
             </ul>
         </div>
       
@@ -29,8 +54,10 @@
             </a>
         </picture>
     </div>
-</navbar>
+</nav>
 
 <style>
-    
+ .active {
+    color: #ea580c;
+  }
 </style>
