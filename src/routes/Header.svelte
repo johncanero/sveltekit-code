@@ -3,6 +3,7 @@
     import { onMount } from "svelte";
     import svelteIcon from '$lib/images/svelteIcon.png';
     import githubIcon from '$lib/images/githubIcon.png';
+    import 'iconify-icon'
 
     // Highliting Navbar Links
   const navs = [
@@ -24,10 +25,10 @@
   
 
 
-<nav class='p-6 bg-zinc-50'>
+<nav class='px-6 py-4 bg-zinc-900 bg-opacity-95'>
     <div class='flex justify-between'>
         <div class='flex'>
-            <picture class='mr-12'>
+            <picture class='mr-16'>
                 <a href="/">
                     <img width={36} height={36} src={svelteIcon} alt="SvelteKit Icon" />
                 </a>
@@ -39,7 +40,7 @@
                     <a
                     {href}
                     class:active={href === "/" ? routeId === "/" : url.includes(href)}
-                    class='font-medium text-md hover:text-orange-500'
+                    class='font-medium text-white text-md hover:text-orange-500'
                     {title}>
                         {title}
                     </a>
@@ -50,7 +51,7 @@
       
         <picture class='hidden md:block'>
             <a href="https://github.com/sveltejs/kit" target="_blank">
-                <img width={36} height={36} src={githubIcon} alt="SvelteKit Icon" />
+                <iconify-icon icon="mdi:github" style="font-size: 36px" class='text-white hover:text-orange-600'></iconify-icon>
             </a>
         </picture>
     </div>
@@ -58,6 +59,10 @@
 
 <style>
  .active {
+    color: #fff;
+  }
+
+  a:hover {
     color: #ea580c;
   }
 </style>

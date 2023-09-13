@@ -24,6 +24,8 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/poppins": "^5.0.8",
+		"@react-icons/all-files": "^4.1.0",
+		"iconify-icon": "^1.0.8",
 		"postcss-import": "^15.1.0"
 	}
 }
