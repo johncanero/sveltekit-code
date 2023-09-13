@@ -22,10 +22,7 @@
   $: routeId = $page.url.pathname;
 </script>
 
-  
-
-
-<nav class='px-6 py-4 bg-zinc-900 bg-opacity-95'>
+<nav class='px-6 py-4 bg-orange-600 bg-opacity-95'>
     <div class='flex justify-between'>
         <div class='flex'>
             <picture class='mr-16'>
@@ -34,13 +31,13 @@
                 </a>
             </picture>
             
-            <ul class='hidden mt-1 md:flex gap-x-10'>
+            <ul class='hidden mt-1 md:flex gap-x-14'>
                 {#each navs as { title, href }}
                 <li>
                     <a
                     {href}
                     class:active={href === "/" ? routeId === "/" : url.includes(href)}
-                    class='font-medium text-white text-md hover:text-orange-500'
+                    class='font-medium text-md text-neutral-900 hover:text-neutral-50'
                     {title}>
                         {title}
                     </a>
@@ -60,9 +57,5 @@
 <style>
  .active {
     color: #fff;
-  }
-
-  a:hover {
-    color: #ea580c;
   }
 </style>

@@ -1,5 +1,5 @@
-<footer class='flex flex-col items-center justify-center py-4 bg-orange-600'>
-		<p>visit <a href="https://kit.svelte.dev" class='text-white hover:text-orange-100'>kit.svelte.dev</a> to learn SvelteKit</p>
+<footer class='flex flex-col items-center justify-center py-4 bg-orange-600 bg-opacity-95'>
+		<p>visit <a href="https://kit.svelte.dev" class='text-white hover:underline'>kit.svelte.dev</a> to learn SvelteKit</p>
 </footer>
 
 

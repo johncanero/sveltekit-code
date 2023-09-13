@@ -8,7 +8,7 @@
 </svelte:head>
 
 <section>
-    <div class='mt-1'>
+    <div class='mt-10'>
         <h1 class='text-2xl font-bold text-center'>Welcome to <span class='text-orange-600'>SvelteKit</span></h1>
         <p class='text-center'>Visit <a href="https://kit.svelte.dev" class='text-orange-500 hover:text-orange-600'>kit.svelte.dev</a> to read the documentation</p>
     </div>

@@ -9,7 +9,7 @@
 
 <section>
     <div>
-        <h1 class='text-2xl font-bold text-center'>About</h1>
+        <h1 class='mt-10 text-2xl font-bold text-center'>About</h1>
         <p class='text-center'>Visit <a href="https://kit.svelte.dev" class='text-orange-500 hover:text-orange-600'>kit.svelte.dev</a> to read the documentation</p>
     </div>
 
@@ -20,26 +20,32 @@
         </picture>
     </div>
 
-    <!-- <div class="text-column">
-	    <h1>About this app</h1>
-        
+    <div class='mb-12'>
         <p>
-            This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
+            This is a <a href="https://kit.svelte.dev" class='text-orange-600 hover:underline'>SvelteKit</a> app. You can make your own by typing the
             following into your command line and following the prompts:
         </p>
 
-	    <pre>npm create svelte@latest</pre>
+        <div class='p-8 mt-4 rounded-2xl bg-neutral-900'>
+            <pre class='text-white'>npm create svelte@latest my-app</pre>
+            <pre class='text-white'>cd my-app</pre>
+            <pre class='text-white'>npm install</pre>
+            <pre class='text-white'>npm run dev</pre>
+            
+        </div>
 
-        <p>
+        <p class='mt-4'>
             The page you're looking at is purely static HTML, with no client-side interactivity needed.
             Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
             the devtools network panel and reloading.
         </p>
-
-        <p>
-            The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-            using it with JavaScript disabled!
-        </p>
-    </div> -->
-
+    </div>
 </section>
+
+
+<!-- style -->
+<style>
+  h1, p {
+    font-family: 'Poppins', sans-serif;
+  }
+</style>
