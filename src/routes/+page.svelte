@@ -13,10 +13,10 @@
         <p class='text-center'>Visit <a href="https://kit.svelte.dev" class='text-orange-500 hover:text-orange-600'>kit.svelte.dev</a> to read the documentation</p>
     </div>
     
-    <div class='flex justify-center'>
+    <div class='flex justify-center mt-12 md:mt-0'>
         <picture>
             <!-- <source srcset={welcome} type="image/webp" /> -->
-            <img width={600} height={600} src={svelteKitTrain} alt="SvelteKit 3D" />
+            <img width={500} height={500} src={svelteKitTrain} alt="SvelteKit 3D" />
         </picture>
     </div>
 </section>
