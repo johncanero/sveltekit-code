@@ -1,5 +1,25 @@
 <script>
+// @ts-nocheck
+
     import sveltekit3D from '$lib/images/svelteKit3D.png';
+
+    // copyText functionality   
+    function copyText(htmlElement) {
+        if (!htmlElement) {
+        return;
+        }
+
+        let elementText = htmlElement.innerText;
+
+        let inputElement = document.createElement('input');
+        inputElement.setAttribute('value', elementText);
+        document.body.appendChild(inputElement);
+
+        inputElement.select();
+
+        document.execCommand('copy');
+        inputElement.parentNode.removeChild(inputElement);
+    }
 </script>
 
 <svelte:head>
@@ -26,12 +46,34 @@
             following into your command line and following the prompts:
         </p>
 
-        <div class='p-8 mt-4 rounded-2xl bg-neutral-900'>
-            <pre class='text-white'>npm create svelte@latest my-app</pre>
-            <pre class='text-white'>cd my-app</pre>
-            <pre class='text-white'>npm install</pre>
-            <pre class='text-white'>npm run dev</pre>
-            
+        <div class='p-8 mt-4 rounded-2xl bg-zinc-800'>
+            <div class='flex justify-between'>
+                <pre id="text" class='text-sm text-white md:text-base'>npm create svelte@latest my-app</pre>
+                <button on:click="{() => copyText(document.querySelector('#text'))}">
+                    <iconify-icon icon="ph:copy" style="font-size: 20px" class='text-white hover:text-zinc-200'></iconify-icon>
+                </button>
+            </div>
+
+            <div class='flex justify-between'>
+                <pre id="text2" class='text-sm text-white md:text-base'>cd my-app</pre>
+                <button on:click="{() => copyText(document.querySelector('#text2'))}">
+                    <iconify-icon icon="ph:copy" style="font-size: 20px" class='text-white hover:text-zinc-200'></iconify-icon>
+                </button>
+            </div>
+         
+             <div class='flex justify-between'>
+                <pre id="text3" class='text-sm text-white md:text-base'>npm install</pre>
+                <button on:click="{() => copyText(document.querySelector('#text3'))}">
+                    <iconify-icon icon="ph:copy" style="font-size: 20px" class='text-white hover:text-zinc-200'></iconify-icon>
+                </button>
+            </div>
+
+             <div class='flex justify-between'>
+                 <pre id="text3" class='text-sm text-white md:text-base'>npm run dev</pre>
+                <button on:click="{() => copyText(document.querySelector('#text3'))}">
+                    <iconify-icon icon="ph:copy" style="font-size: 20px" class='text-white hover:text-zinc-200'></iconify-icon>
+                </button>
+            </div>
         </div>
 
         <p class='mt-4'>
@@ -47,5 +89,6 @@
 <style>
   h1, p {
     font-family: 'Poppins', sans-serif;
+    color: white;
   }
 </style>

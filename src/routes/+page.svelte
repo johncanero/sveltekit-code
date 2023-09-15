@@ -24,10 +24,11 @@
 <!-- style -->
 <style lang="postcss">
   :global(html) {
-    background-color: theme(colors.gray.50);
+    background-color: theme(colors.zinc.900);
   }
 
   h1, p {
     font-family: 'Poppins', sans-serif;
+    color: white;
   }
 </style>

@@ -2,7 +2,6 @@
     import { page } from "$app/stores";
     import { onMount } from "svelte";
     import svelteIcon from '$lib/images/svelteIcon.png';
-    import githubIcon from '$lib/images/githubIcon.png';
     import 'iconify-icon'
 
     // Highliting Navbar Links
@@ -31,7 +30,7 @@
                 </a>
             </picture>
             
-            <ul class='hidden mt-1 md:flex gap-x-14'>
+            <ul class='hidden mt-1 md:flex md:gap-x-12'>
                 {#each navs as { title, href }}
                 <li>
                     <a
@@ -48,10 +47,25 @@
       
         <picture class='hidden md:block'>
             <a href="https://github.com/sveltejs/kit" target="_blank">
-                <iconify-icon icon="mdi:github" style="font-size: 36px" class='text-white hover:text-orange-600'></iconify-icon>
+                <iconify-icon icon="mdi:github" style="font-size: 36px" class='text-white hover:text-black'></iconify-icon>
             </a>
         </picture>
+
+            <ul class='flex mt-1 md:hidden gap-x-6'>
+                {#each navs as { title, href }}
+                <li>
+                    <a
+                    {href}
+                    class:active={href === "/" ? routeId === "/" : url.includes(href)}
+                    class='font-medium text-md text-neutral-900 hover:text-neutral-50'
+                    {title}>
+                        {title}
+                    </a>
+                 </li>
+                {/each}
+            </ul>
     </div>
+    
 </nav>
 
 <style>
